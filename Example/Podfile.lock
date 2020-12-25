@@ -1,0 +1,16 @@
+PODS:
+  - DDMoya (0.1.0)
+
+DEPENDENCIES:
+  - DDMoya (from `../`)
+
+EXTERNAL SOURCES:
+  DDMoya:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  DDMoya: cb925c17091fda71b1791d66d478e81462899a51
+
+PODFILE CHECKSUM: 68e4d2f3daade99b05ab279e2bae4ff26c4f2271
+
+COCOAPODS: 1.10.0

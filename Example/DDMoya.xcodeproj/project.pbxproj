@@ -30,7 +30,7 @@
 /* Begin PBXFileReference section */
 		32C50FB64744BD5591792544 /* Pods-DDMoya_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDMoya_Example.release.xcconfig"; path = "Target Support Files/Pods-DDMoya_Example/Pods-DDMoya_Example.release.xcconfig"; sourceTree = "<group>"; };
 		48F365FDEBBEFA306F11471F /* Pods-DDMoya_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDMoya_Tests.release.xcconfig"; path = "Target Support Files/Pods-DDMoya_Tests/Pods-DDMoya_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		51E3032EB5B7E9F1E8CA3EAE /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		51E3032EB5B7E9F1E8CA3EAE /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* DDMoya_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DDMoya_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,9 +43,9 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		6F79096C57BCA2DF07AFDE47 /* Pods_DDMoya_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DDMoya_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86DD11DFFCDE5B4CBACCBD3B /* Pods_DDMoya_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DDMoya_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8DAEF8C8C3031CF688DE8B0F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		8DAEF8C8C3031CF688DE8B0F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		9C79C83A3D2E3E1434EB5986 /* Pods-DDMoya_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDMoya_Example.debug.xcconfig"; path = "Target Support Files/Pods-DDMoya_Example/Pods-DDMoya_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		D0F9C168FB3D1A6DAF503D3A /* DDMoya.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = DDMoya.podspec; path = ../DDMoya.podspec; sourceTree = "<group>"; };
+		D0F9C168FB3D1A6DAF503D3A /* DDMoya.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = DDMoya.podspec; path = ../DDMoya.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D71105678D0E380F91ADE88A /* Pods-DDMoya_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDMoya_Tests.debug.xcconfig"; path = "Target Support Files/Pods-DDMoya_Tests/Pods-DDMoya_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,7 +156,6 @@
 				D71105678D0E380F91ADE88A /* Pods-DDMoya_Tests.debug.xcconfig */,
 				48F365FDEBBEFA306F11471F /* Pods-DDMoya_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -227,6 +226,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);

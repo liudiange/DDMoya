@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DDMoya'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of DDMoya.'
+  s.version          = '0.1.4'
+  s.summary          = 'description'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -21,14 +21,18 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/shaoyeliudiange@163.com/DDMoya'
+  s.homepage         = 'https://github.com/liudiange/DDMoya'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'shaoyeliudiange@163.com' => 'hzycode@163.com' }
-  s.source           = { :git => 'https://github.com/shaoyeliudiange@163.com/DDMoya.git', :tag => s.version.to_s }
+  # s.license          = { :type => 'MIT', :file => 'LICENSE' }
+  s.author           = { 'brown' => 'shaoyeliudiange@163.com' }
+  s.source           = { :git => 'https://github.com/liudiange/DDMoya.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
+  
+  s.swift_version = '5.0'
   s.ios.deployment_target = '9.0'
+  s.osx.deployment_target = '10.12'
+  s.tvos.deployment_target = '10.0'
+  s.watchos.deployment_target = '3.0'
 
   s.source_files = 'DDMoya/Classes/**/*'
   
@@ -37,6 +41,8 @@ TODO: Add long description of the pod here.
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'Alamofire', '~> 4.1'
+  s.framework  = 'Foundation'
+  s.dependency 'Result'
+  
 end
