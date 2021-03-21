@@ -34,28 +34,42 @@ open class Endpoint {
 
     /// The HTTP header fields for the request.
     public let httpHeaderFields: [String: String]?
+    
+    public var timeout: TimeInterval
 
     public init(url: String,
                 sampleResponseClosure: @escaping SampleResponseClosure,
                 method: DDMoya.Method,
                 task: Task,
-                httpHeaderFields: [String: String]?) {
+                httpHeaderFields: [String: String]?,
+                timeout: TimeInterval) {
 
         self.url = url
         self.sampleResponseClosure = sampleResponseClosure
         self.method = method
         self.task = task
         self.httpHeaderFields = httpHeaderFields
+        self.timeout = timeout
     }
 
     /// Convenience method for creating a new `Endpoint` with the same properties as the receiver, but with added HTTP header fields.
     open func adding(newHTTPHeaderFields: [String: String]) -> Endpoint {
-        return Endpoint(url: url, sampleResponseClosure: sampleResponseClosure, method: method, task: task, httpHeaderFields: add(httpHeaderFields: newHTTPHeaderFields))
+        return Endpoint(url: url,
+                        sampleResponseClosure: sampleResponseClosure,
+                        method: method,
+                        task: task,
+                        httpHeaderFields: add(httpHeaderFields: newHTTPHeaderFields),
+                        timeout: self.timeout)
     }
 
     /// Convenience method for creating a new `Endpoint` with the same properties as the receiver, but with replaced `task` parameter.
     open func replacing(task: Task) -> Endpoint {
-        return Endpoint(url: url, sampleResponseClosure: sampleResponseClosure, method: method, task: task, httpHeaderFields: httpHeaderFields)
+        return Endpoint(url: url,
+                        sampleResponseClosure: sampleResponseClosure,
+                        method: method,
+                        task: task,
+                        httpHeaderFields: httpHeaderFields,
+                        timeout: self.timeout)
     }
 
     fileprivate func add(httpHeaderFields headers: [String: String]?) -> [String: String]? {
@@ -75,11 +89,12 @@ open class Endpoint {
 extension Endpoint {
     // swiftlint:disable cyclomatic_complexity
     /// Returns the `Endpoint` converted to a `URLRequest` if valid. Throws an error otherwise.
-    public func urlRequest(timeout: TimeInterval = 20) throws -> URLRequest {
+    public func urlRequest() throws -> URLRequest {
         guard let requestURL = Foundation.URL(string: url) else {
             throw MoyaError.requestMapping(url)
         }
 
+        
         var request = URLRequest(url: requestURL)
         request.httpMethod = method.rawValue
         request.allHTTPHeaderFields = httpHeaderFields

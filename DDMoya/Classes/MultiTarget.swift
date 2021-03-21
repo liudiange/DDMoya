@@ -51,4 +51,8 @@ public enum MultiTarget: TargetType {
         case .target(let target): return target
         }
     }
+    
+    public var timeout: TimeInterval{
+        return target.timeout
+    }
 }
